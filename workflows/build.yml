@@ -36,5 +36,5 @@ on:
             ECR_REPOSITORY: ${{ secrets.REPO_NAME }}
             IMAGE_TAG: ${{ steps.get-commit-hash.outputs.commit-hash }}-${{ steps.get-timestamp.outputs.timestamp }}
           run: |
-            docker build -t myapp:latest 600222537277.dkr.ecr.us-east-1.amazonaws.com/myapp:latest.
+            docker build -t myapp/myapp:latest.
             docker push 600222537277.dkr.ecr.us-east-1.amazonaws.com/myapp:latest
